@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_payment_receipt_document_inherit" inherit_id="account.report_payment_receipt">
+        <xpath expr="//span[contains(@class, 'payment_method_line')]" position="replace">
+            <span class="payment_method_line">
+                <t t-esc="o.payment_method_line_id.name"/>
+            </span>
+        </xpath>
+    </template>
+</odoo>
